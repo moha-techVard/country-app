@@ -1,0 +1,71 @@
+/* style.css */
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden; /* Empêche le défilement */
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Couvre l'arrière-plan en gardant les proportions */
+  z-index: -1; /* Positionne la vidéo derrière le contenu */
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 1; /* Assure que le contenu est au-dessus de la vidéo */
+  padding: 20px;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Fond semi-transparent pour améliorer la lisibilité */
+  border-radius: 10px; /* Arrondir les coins du formulaire */
+  max-width: 600px; /* Limite la largeur du formulaire */
+  width: 100%; /* Assure que le contenu prend toute la largeur disponible jusqu'à la largeur maximale définie */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type="text"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 400px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+#results {
+  margin-top: 20px;
+}
